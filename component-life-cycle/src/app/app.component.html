@@ -1,0 +1,21 @@
+
+<div class="col">
+    <button class="btn btn-sm btn-outline-warning " (click)="bikeSmokeColourFromParent = 'yellow'; bikeTyreSizeFromParent= 20"> change smoke to yellow</button>
+    <button class="btn btn-sm btn-outline-danger " (click)="bikeSmokeColourFromParent = 'red'; bikeTyreSizeFromParent = 50" > change smoke to red</button>
+</div>
+
+
+<div class="col">
+    <button class="btn btn-sm btn-outline-dark" (click)="increamentArrayLength()" >Add one Bike</button>
+    <button class="btn btn-sm btn-outline-dark" (click)="decreamentArrayLength()">Remove Bike</button>
+</div>
+
+
+
+<div *ngFor="let item of createArray(arraySize);let i = index">
+    <app-bike [bikeSmokeColour]="bikeSmokeColourFromParent" [bikeTyreSize]="bikeTyreSizeFromParent">
+        <div class="text-primary"> this line is a gift given by parent to bike </div>
+    </app-bike>
+</div>
+
+
