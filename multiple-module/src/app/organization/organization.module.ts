@@ -4,6 +4,7 @@ import { OrgHomeComponent } from './org-home/org-home.component';
 import { OrgInfoComponent } from './org-info/org-info.component';
 import { OrgMainComponent } from './org-main/org-main.component';
 import { RouterModule, Routes } from '@angular/router';
+import { OrgDetailComponent } from './org-detail/org-detail.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
     OrgInfoComponent,
     OrgHomeComponent,
     OrgMainComponent,
+    OrgDetailComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ const routes: Routes = [
   exports:[
     OrgInfoComponent,
     OrgHomeComponent,
-    OrgMainComponent
+    OrgMainComponent,
+    OrgDetailComponent
   ]
 })
 export class OrganizationModule { }
