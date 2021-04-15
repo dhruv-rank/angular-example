@@ -1,0 +1,10 @@
+<img src="../../assets/svg/bike.svg" alt="bike">
+<ng-content>
+</ng-content>
+
+<div [ngClass]="{'text-warning': bikeSmokeColour == 'yellow'}"> this bike has somke of color {{ bikeSmokeColour }}</div>
+
+
+<div *ngFor="let item of componentsOfBike">
+    <span>{{item}} <span *ngIf="bikeTyreSize == 20"></span></span>
+</div>
