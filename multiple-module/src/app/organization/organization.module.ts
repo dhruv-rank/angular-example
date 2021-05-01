@@ -5,6 +5,7 @@ import { OrgInfoComponent } from './org-info/org-info.component';
 import { OrgMainComponent } from './org-main/org-main.component';
 import { RouterModule, Routes } from '@angular/router';
 import { OrgDetailComponent } from './org-detail/org-detail.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 const routes: Routes = [
@@ -13,7 +14,6 @@ const routes: Routes = [
     {path: 'info', component:OrgInfoComponent}
   ]}
 ];
-
 
 
 @NgModule({
@@ -25,9 +25,11 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-  RouterModule.forChild(routes)   //forChild is used for feature module routes
+    SharedModule,                 //remove shared module and you will get better idea about how shared module works 
+    RouterModule.forChild(routes)   //forChild is used for feature module routes
   ],
   exports:[
+    RouterModule,
     OrgInfoComponent,
     OrgHomeComponent,
     OrgMainComponent,

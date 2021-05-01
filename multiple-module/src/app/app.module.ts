@@ -3,20 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { OrganizationModule } from './organization/organization.module';
-import { JobSeekerModule } from './job-seeker/job-seeker.module';
-import { AppHomeComponent } from './app-home/app-home.component';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 
+//all the exports of this feature module can be now use in this current module 
 @NgModule({
   declarations: [
-    AppComponent,
-    AppHomeComponent
+    AppComponent
   ],
-  imports: [
+  imports: [ 
     BrowserModule,
-    AppRoutingModule,
-    OrganizationModule,    //imported in parent module     //all the exports of this feature module can be now use in this current module
-    JobSeekerModule,      //imported in parent module 
+    AppRoutingModule,  
+    CoreModule,             //core module needs to be imported once 
+    SharedModule            
   ],
   providers: [],
   bootstrap: [AppComponent]

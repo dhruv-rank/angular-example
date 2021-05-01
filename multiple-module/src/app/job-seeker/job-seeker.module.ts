@@ -5,6 +5,7 @@ import { JsHomeComponent } from './js-home/js-home.component';
 import { JsMainComponent } from './js-main/js-main.component';
 import { RouterModule } from '@angular/router';
 import { JobSeekerRoutingModule } from './job-sekeer-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 // feature module 
@@ -13,12 +14,13 @@ import { JobSeekerRoutingModule } from './job-sekeer-routing.module';
   declarations: [     //declare components,directives,pipes here which are specific to this feature module   
     JsInfoComponent,      
     JsHomeComponent, 
-     JsMainComponent       
+    JsMainComponent       
   ],
   imports: [
     CommonModule,
+    JobSeekerRoutingModule,
     RouterModule,
-    JobSeekerRoutingModule
+    SharedModule
   ],
   exports:[       //provide the declared component,directives,pipes to module which has imported this feature module(JobSeekerModule)
     JsInfoComponent,      

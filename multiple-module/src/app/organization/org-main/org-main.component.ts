@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NotificationService } from 'src/app/_services/notification.service';
 
 @Component({
   selector: 'app-org-main',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrgMainComponent implements OnInit {
 
-  constructor() { }
+  constructor(private notificationService:NotificationService) { }
 
   ngOnInit(): void {
   }
