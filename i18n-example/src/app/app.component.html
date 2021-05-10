@@ -1,0 +1,8 @@
+<h1> {{ 'HEY' | translate}}</h1>
+
+<h3>{{'FEELS' | translate}}</h3>
+
+<!-- set laguages by just simple tapping the button -->
+<button (click)="translateService.use('en')">Try for English</button>
+<button (click)="translateService.use('sp')">Try for Spanish</button>
+<button (click)="translateService.use('gr')">Try for German</button>

@@ -5,19 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { CustomLoadModuleStrategyService } from './custom-load-module-strategy.service';
 
 //all the exports of this feature module can be now use in this current module 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
-  imports: [ 
+  imports: [
     BrowserModule,
-    AppRoutingModule,  
+    AppRoutingModule,
     CoreModule,             //core module needs to be imported once 
-    SharedModule            
+    SharedModule
   ],
-  providers: [],
+  providers: [CustomLoadModuleStrategyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

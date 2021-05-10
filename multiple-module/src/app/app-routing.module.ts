@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AppHomeComponent } from './shared/app-home/app-home.component';
+import { CustomLoadModuleStrategyService } from './custom-load-module-strategy.service';
 
 const routes: Routes = [
   { path: '', component: AppHomeComponent },
@@ -22,7 +23,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(
       routes,
-      { preloadingStrategy: PreloadAllModules } //this will load all the lazyloaded modules in background
+      { preloadingStrategy: CustomLoadModuleStrategyService } //this will load all the lazyloaded modules in background
     ),
   ],
   exports: [RouterModule],
