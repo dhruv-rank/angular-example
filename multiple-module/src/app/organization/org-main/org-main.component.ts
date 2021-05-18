@@ -10,6 +10,8 @@ export class OrgMainComponent implements OnInit {
 
   constructor(private notificationService:NotificationService) { }
 
+buttonClasses = "btn btn-secondary m-3";
+ApplyBoldClass = false;
   ngOnInit(): void {
   }
 

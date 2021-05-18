@@ -21,7 +21,6 @@ export class TempalteDrivenComponent implements OnInit {
     this.submitted = true;
     if (this.submitted && !this.newForm.valid) {
       console.log(this.newForm);
-      alert('error');
       return;
     }
     alert('you are succeed');

@@ -1,6 +1,6 @@
 <form #newForm="ngForm" (ngSubmit)="onSubmit(newForm)">
-    <input type="text" [name]="'anotherone'"  [ngClass]="{'bd-red': submitted && firstname.errors && firstname.errors.emailError}"
-        #firstname="ngModel" ngModel name='email' appCutomTemplate>
+    <input type="text" [name]="'anotherone'"  [ngClass]="{'bd-red': submitted && firstname.errors?.emailError}"
+        #firstname="ngModel" ngModel name='email' appAsyncTemplateDrivenValidator>
     {{firstname.errors | json}}
     <input value="male" type="radio" name="gender" ngModel> Male
     <input value="felmale" type="radio" name="gender" ngModel> Female

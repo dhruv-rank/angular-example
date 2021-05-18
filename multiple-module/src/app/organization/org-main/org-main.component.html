@@ -1,6 +1,6 @@
 <app-header></app-header>
-<button class="btn btn-secondary m-3" [routerLink]="['info']" routerLinkActive="router-link-active" >Organization Info</button>
-<button class="btn btn-secondary m-3" [routerLink]="['home']" routerLinkActive="router-link-active" >Organization Home </button>
+<button [class]="buttonClasses" [class.boldClass]='ApplyBoldClass' [routerLink]="['info']" routerLinkActive="router-link-active" >Organization Info</button>
+<button [class]="buttonClasses" [class.boldClass]='!ApplyBoldClass' [routerLink]="['home']" routerLinkActive="router-link-active" >Organization Home </button>
 <router-outlet></router-outlet>
 <div app-org-detail></div> 
 <app-footer></app-footer>
