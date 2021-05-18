@@ -18,7 +18,7 @@ import { CustomLoadModuleStrategyService } from './custom-load-module-strategy.s
     CoreModule,             //core module needs to be imported once 
     SharedModule
   ],
-  providers: [CustomLoadModuleStrategyService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
